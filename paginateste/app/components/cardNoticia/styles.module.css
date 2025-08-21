@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+
+    height: 16rem;
+    gap: 1rem;
+
+    border-bottom: solid 1px #858585;
+    padding: 1rem 0;
+
+    img {
+        height: 100%;
+        width: 22rem;
+
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #bd0000;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #272727;
+        }
+
+        .categoria {
+            color: #860000;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .tempo {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #6b6b6b;
+        }
+    }
+}

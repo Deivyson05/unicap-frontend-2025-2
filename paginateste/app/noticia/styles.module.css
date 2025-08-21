@@ -1,0 +1,50 @@
+.container {
+    padding: 0 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        
+        gap: 0.5rem;
+
+
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #2b2b2b;
+        }
+
+        .autor {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-weight: 500;
+                color: rgb(73, 73, 73);
+            }
+
+            .nome {
+                font-weight: 600;
+                color: red;
+            }
+        }
+
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        margin-top: 1rem;
+    }
+}
