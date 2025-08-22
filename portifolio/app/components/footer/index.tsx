@@ -6,22 +6,22 @@ export function Footer() {
         <footer id="contato" className="flex flex-col w-screen p-10 font-sans gap-10">
             <header className="flex justify-between">
                 <div>
-                    <h4 className="text-xl text-gray-800 font-semibold">Deivyson Santos</h4>
-                    <span className="text-gray-700">Fullstack Developer</span>
+                    <h4 className="text-xl text-gray-800 dark:text-gray-200 font-semibold">Deivyson Santos</h4>
+                    <span className="text-gray-700 dark:text-gray-300">Fullstack Developer</span>
                 </div>
 
                 <div className="flex flex-col gap-2">
                     <strong className="text-gray-400 font-light">Curriculo</strong>
-                    <Link href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K1578678E1" className="text-gray-600 font-semibold" target="_blank">Lattes</Link>
-                    <Link href="https://www.linkedin.com/in/deivyson-ricardo-33354425b/?originalSubdomain=br" className="text-gray-600 font-semibold" target="_blank">LinkedIn</Link>
-                    <Link href="https://github.com/Deivyson05" className="text-gray-600 font-semibold" target="_blank">Github</Link>
+                    <Link href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K1578678E1" className="text-gray-600 dark:text-gray-300 font-semibold" target="_blank">Lattes</Link>
+                    <Link href="https://www.linkedin.com/in/deivyson-ricardo-33354425b/?originalSubdomain=br" className="text-gray-600 font-semibold dark:text-gray-300" target="_blank">LinkedIn</Link>
+                    <Link href="https://github.com/Deivyson05" className="text-gray-600 font-semibold dark:text-gray-300" target="_blank">Github</Link>
                 </div>
 
                 <div className="flex flex-col gap-2">
                     <strong className="text-gray-400 font-light">Contato</strong>
-                    <Link href="#" className="text-gray-600 font-semibold">(81) 9 8358-7681</Link>
-                    <Link href="mailto:deivysonrssantos@outlook.com" className="text-gray-600 font-semibold" target="_blank">deivysonrssantos@outlook.com</Link>
-                    <Link href="mailto:deivysonr52@gmail.com" className="text-gray-600 font-semibold" target="_blank">deivysonr52@gmail.com</Link>
+                    <Link href="#" className="text-gray-600 font-semibold dark:text-gray-300">(81) 9 8358-7681</Link>
+                    <Link href="mailto:deivysonrssantos@outlook.com" className="text-gray-600 font-semibold dark:text-gray-300" target="_blank">deivysonrssantos@outlook.com</Link>
+                    <Link href="mailto:deivysonr52@gmail.com" className="text-gray-600 font-semibold dark:text-gray-300" target="_blank">deivysonr52@gmail.com</Link>
                 </div>
             </header>
             <footer className="flex justify-between">
