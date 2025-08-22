@@ -2,7 +2,7 @@ import { Profile } from "@/app/components/profile"
 
 export function Sobre () {
     return (
-        <section id="sobre" className="scroll-mt-20 flex h-fit items-center p-10 gap-40">
+        <section id="sobre" className="scroll-mt-20 flex h-fit items-center p-10 gap-40 flex-col md:flex-row">
             <div className="flex flex-col gap-4">
                 <h2 className="text-3xl font-semibold">Sobre</h2>
                 <p>

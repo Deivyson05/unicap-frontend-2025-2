@@ -11,7 +11,7 @@ export default function Home() {
       <HomeSection/>
       <Sobre/>
       <Projetos/>
-      <section id="habilidades" className="scroll-mt-30 w-screen h-auto flex flex-col items-center justify-center gap-10 my-10">
+      <section id="habilidades" className="scroll-mt-30 w-screen h-auto flex flex-col items-center justify-center gap-10 p-10">
         <h2 className="text-3xl font-semibold">Habilidades</h2>
         <CardHabilidades/>
       </section>

@@ -4,7 +4,7 @@ import Link from "next/link";
 export function Footer() {
     return (
         <footer id="contato" className="flex flex-col w-screen p-10 font-sans gap-10">
-            <header className="flex justify-between">
+            <header className="flex justify-between flex-col md:flex-row gap-4 md:gap-0">
                 <div>
                     <h4 className="text-xl text-gray-800 dark:text-gray-200 font-semibold">Deivyson Santos</h4>
                     <span className="text-gray-700 dark:text-gray-300">Fullstack Developer</span>
@@ -29,7 +29,7 @@ export function Footer() {
                     © 2025 Deivyson Santos
                 </span>
 
-                <div className="flex gap-8">
+                <div className="flex gap-4 md:gap-8">
                     <Link href="#" className="hover:-translate-y-2 transition duration-350">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

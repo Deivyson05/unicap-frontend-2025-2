@@ -17,10 +17,10 @@ export function Header() {
             <nav className={`
                     flex gap-4
                 `}>
-                <a href="#sobre" className="p-4">Sobre</a>
-                <a href="#projetos" className="p-4">Projetos</a>
-                <a href="#habilidades" className="p-4">Habilidades</a>
-                <a href="#contato" className="p-4">Contato</a>
+                <a href="#sobre" className="md:p-4">Sobre</a>
+                <a href="#projetos" className="md:p-4">Projetos</a>
+                <a href="#habilidades" className="md:p-4">Habilidades</a>
+                <a href="#contato" className="md:p-4">Contato</a>
             </nav>
         </header>
     );
