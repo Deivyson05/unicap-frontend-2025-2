@@ -8,7 +8,7 @@ import {
 export function Footer() {
     return (
         <footer className="p-10 flex flex-col gap-6 bg-gray-950">
-            <header className="flex justify-between">
+            <header className="flex flex-col gap-6 justify-between md:flex-row md:gap-0">
                 <div>
                     <h3 className="text-2xl font-semibold">Deivyson</h3>
                     <span>FullStack Developer</span>

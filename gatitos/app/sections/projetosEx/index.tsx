@@ -22,7 +22,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export function Projetos() {
+export function ProjetosEmExecucao() {
 
     const [width, setWidth] = useState(0);
     useEffect(() => {
@@ -38,8 +38,8 @@ export function Projetos() {
 
 
     return (
-        <section className="flex flex-col items-center gap-4 p-20">
-            <h2 className="text-2xl font-semibold text-center md:text-3xl md:text-left">Projetos Concluídos</h2>
+        <section className="flex flex-col gap-4 p-20">
+            <h2 className="text-2xl font-semibold text-center md:text-3xl md:text-left">Projetos Em Execução</h2>
             <div className={width > 480? "flex flex-wrap gap-6" : "flex flex-col items-center"}>
 
                 {

@@ -124,3 +124,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* impede scroll lateral */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box; /* conta padding/border na largura */
+}
