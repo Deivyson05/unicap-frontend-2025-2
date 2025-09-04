@@ -40,12 +40,12 @@ export function Projetos() {
     return (
         <section className="flex flex-col items-center gap-4 p-20">
             <h2 className="text-2xl font-semibold text-center md:text-3xl md:text-left">Projetos Concluídos</h2>
-            <div className={width > 480? "flex flex-wrap gap-6" : "flex flex-col items-center"}>
+            <div className={width > 480? "flex flex-wrap gap-6 justify-center" : "flex flex-col items-center"}>
 
                 {
                     width > 480 ? (
                         projetos.map(projeto => (
-                            <Card className="flex flex-col w-74 h-fill p-4 gap-4 hover:scale-104 transition ease-in" key={projeto.id}>
+                            <Card className="flex flex-col w-74 h-fill p-4 gap-4 hover:scale-104 transition ease-in rounded-lg" key={projeto.id}>
                                 <img src={projeto.img} alt="banner" className="w-full h-40 rounded-md object-cover" />
                                 <h3 className="w-full h-8 font-bold text-xl flex items-center">{projeto.nome}</h3>
                                 <span className="w-full h-6s text-md font-semibold flex items-center">{projeto.desc}</span>
@@ -56,7 +56,7 @@ export function Projetos() {
                             <CarouselContent>
                                 {projetos.map(projeto => (
                                     <CarouselItem className="flex justify-center" key={projeto.id}>
-                                        <Card className="flex flex-col w-74 h-fill p-4 gap-4">
+                                        <Card className="flex flex-col w-74 h-fill p-4 gap-4 rounded-lg">
                                             <img src={projeto.img} alt="banner" className="w-full h-40 rounded-md object-cover" />
                                             <h3 className="w-full h-8 font-bold text-xl flex items-center">{projeto.nome}</h3>
                                             <span className="w-full h-6s text-md font-semibold flex items-center">{projeto.desc}</span>

@@ -1,26 +1,10 @@
 export const projetos = [
     {
-        id: "combogo-unicap",
-        nome: "Landing page Combogó",
-        desc: "Landing page de apresentação da Combogó",
+        id: "pibic",
+        nome: "PIBIC",
+        desc: "Iniciação científica | UNICAP",
         repo: "",
         site: "https://combogo.vercel.app",
-        img: "https://deivyson.me/assets/proj-combogo-BceIvUR0.png"
-    },
-    {
-        id: "shlomo",
-        nome: "Shlomo",
-        desc: "Aplicativo de gerenciamento de leitura",
-        repo: "",
-        site: "https://combogo.vercel.app",
-        img: "https://deivyson.me/assets/proj-shlomo-BQNE2LsF.png"
-    },
-    {
-        id: "adotai",
-        nome: "Adotaí",
-        desc: "Aplicativo de match de pets",
-        repo: "",
-        site: "https://combogo.vercel.app",
-        img: "https://avatars.githubusercontent.com/u/206623208?s=200&v=4"
+        img: "https://cms.ufmt.br/files/page_images/1646395660.jpg"
     }
 ]

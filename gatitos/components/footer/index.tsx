@@ -18,10 +18,10 @@ export function Footer() {
                     <strong className="font-light">
                         NAVEGAÇÃO
                     </strong>
-                    <a 
-                        className="font-bold" 
-                        href="#home"
-                    >Home</a>
+                    <FooterLink 
+                        href="/"
+                        name="Home"
+                    />
                     <a 
                         className="font-bold"
                         href="#sobre"
@@ -34,12 +34,10 @@ export function Footer() {
                     >
                         Sobre
                     </a>
-                    <a 
-                        className="font-bold"
-                        href="#sobre"
-                    >
-                        Blog
-                    </a>
+                    <FooterLink 
+                        href="/blog"
+                        name="Blog"
+                    />
                 </div>
 
                 <div className="flex flex-col">
