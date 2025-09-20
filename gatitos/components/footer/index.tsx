@@ -74,12 +74,12 @@ export function Footer() {
                         target="_blank"
                     />
                     <FooterLink
-                        href="#"
+                        href="https://www.linkedin.com/in/deivyson-ricardo-33354425b/"
                         name="LinkedIn"
                         target="_blank"
                     />
                     <FooterLink
-                        href="#"
+                        href="https://github.com/Deivyson05"
                         name="GitHub"
                         target="_blank"
                     />
