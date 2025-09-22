@@ -38,8 +38,8 @@ export function SobreSection() {
 
             {
                 width > 1090 ? (
-                    sobre.map(s => (
-                        <Card className="flex flex-row gap-4 p-4">
+                    sobre.map((s, index) => (
+                        <Card className="flex flex-row gap-4 p-4" key={index}>
                             <img src={s.img} alt="img" width={64} height={64} />
                             <div>
                                 <CardTitle>{s.title}</CardTitle>
