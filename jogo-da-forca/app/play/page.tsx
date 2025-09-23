@@ -23,7 +23,7 @@ export default function Play() {
     const [palavra, setPalavra] = useState<LetraFormatada[]>([]);
     const [input, setInput] = useState("");
     const [letrasMarcadas, setLetrasMarcadas] = useState<LetraMarcada[]>([]);
-
+    const [win, setWin] = useState(true);
     const [quantErros, setQuantErros] = useState(0);
 
     const [popupGameoverIsOpen, setPopupGameoverIsOpen] = useState(false);
@@ -80,12 +80,29 @@ export default function Play() {
             });
 
             if(quantErros >= 5) {
+                setWin(false);
                 setPopupGameoverIsOpen(true);
             }
         }
 
         setLetrasMarcadas(lm);
         setPalavra(novaFormatacao);
+
+        let completo = true;
+        palavra.forEach(palav => {
+            if (palav.active == false) {
+                completo = false;
+            }
+        })
+
+        setWin(completo);
+        
+        if(completo == true) {
+            console.log('você venceu')
+            setPopupGameoverIsOpen(true);
+        } else {
+            console.log('incompleto')
+        }
     }
 
     const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -137,6 +154,7 @@ export default function Play() {
             <Audio/>
             <GameoverPopup
                 active={popupGameoverIsOpen}
+                win={win}
             />
         </main>
     )
