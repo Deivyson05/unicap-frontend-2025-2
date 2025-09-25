@@ -22,7 +22,7 @@ export function Header() {
       <nav className="flex gap-4 items-center">
         <Ancora active={pathName == "/"? true : false} href="/" content="Home" />
         <Ancora active={pathName == "/sobre"? true : false} href="/sobre" content="Sobre" />
-        <Ancora active={pathName == "/blog"? true : false} href="/blog" content="Blog" />
+        {/* <Ancora active={pathName == "/blog"? true : false} href="/blog" content="Blog" /> */}
       </nav>
     </header>
   );

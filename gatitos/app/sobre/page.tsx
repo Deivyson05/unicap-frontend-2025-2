@@ -10,7 +10,7 @@ import { SobreSection } from "../sections/sobre";
 export default function Sobre() {
     return (
         <main className="flex flex-col ">
-            <section className="flex py-10 px-10 items-center justify-between h-screen">
+            <section className="flex p-10 md:p-20 items-center justify-between h-screen">
                 <div className="flex flex-col gap-2">
                     <h2 className="text-3xl font-bold md:text-4xl">
                         Deivyson Ricardo Silva dos Santos
@@ -27,10 +27,10 @@ export default function Sobre() {
                         />
                     </span>
                 </div>
-                <div className={styles.img}>
+                {/* <div className={styles.img}>
                     <img src="/bkg.png" alt="Deivyson" />
                     <div></div>
-                </div>
+                </div> */}
             </section>
             <SobreSection/>
             <section className="flex flex-col p-10 gap-4 w-full">

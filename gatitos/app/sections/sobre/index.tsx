@@ -39,7 +39,7 @@ export function SobreSection() {
             {
                 width > 1090 ? (
                     sobre.map((s, index) => (
-                        <Card className="flex flex-row gap-4 p-4" key={index}>
+                        <Card className="flex flex-row gap-4 p-4 bg-gray-900 w-full" key={index}>
                             <img src={s.img} alt="img" width={64} height={64} />
                             <div>
                                 <CardTitle>{s.title}</CardTitle>
@@ -52,7 +52,7 @@ export function SobreSection() {
                         <CarouselContent>
                             {sobre.map((s, index) => (
                                 <CarouselItem className="flex justify-center" key={index}>
-                                    <Card className="flex flex-col w-74 h-fill p-4 gap-4 items-center">
+                                    <Card className="flex flex-col w-74 h-fill p-4 gap-4 items-center bg-gray-900 ">
                                         <img src={s.img} alt="img" width={64} height={64} className="rounded-full"/>
                                         <CardTitle>{s.title}</CardTitle>
                                         <CardDescription className="text-center">{s.description}</CardDescription>
