@@ -27,7 +27,7 @@ interface Props {
 export default function ProjetoDetalha({ params }: Props) {
     const [content, setContent] = useState("");
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState("");
 
     const projeto = projetos.find(projeto => projeto.id === params.id);
 
@@ -70,8 +70,14 @@ export default function ProjetoDetalha({ params }: Props) {
 
                 const decodedContent = decodeBase64(data.content);
                 setContent(decodedContent);
-            } catch (err: any) {
-                setError(err.message);
+            } catch (err) {
+                let errorMessage = "Ocorreu um erro desconhecido";
+                if (err instanceof Error) {
+                    errorMessage = err.message;
+                } else if (typeof err === "string") {
+                    errorMessage = err;
+                }
+                setError(errorMessage);
             } finally {
                 setLoading(false);
             }
