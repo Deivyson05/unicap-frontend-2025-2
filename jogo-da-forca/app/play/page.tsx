@@ -29,7 +29,7 @@ export default function Play() {
     const [popupGameoverIsOpen, setPopupGameoverIsOpen] = useState(false);
 
     function rand(max: number) {
-        return parseInt(Math.random() * max);
+        return Math.floor(Math.random() * max);
     }
 
     function ajeitarPalavra(p: LetraMarcada[]) {
