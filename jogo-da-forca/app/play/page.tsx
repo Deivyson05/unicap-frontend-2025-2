@@ -43,7 +43,7 @@ export default function Play() {
     
 
     useEffect(() => {
-        let formatacao: LetraFormatada[] = [];
+        const formatacao: LetraFormatada[] = [];
         letras.forEach(letra => {
             formatacao.push({
                 content: letra,
@@ -56,7 +56,7 @@ export default function Play() {
     function jogada(l: string) {
         // Cria uma cópia do array com objetos clonados
         const novaFormatacao = palavra.map(letra => ({ ...letra }));
-        let lm = letrasMarcadas.map(letra => ({ ...letra }));
+        const lm = letrasMarcadas.map(letra => ({ ...letra }));
         let encontrado: boolean = false;
         for (let i = 0; i < novaFormatacao.length; i++) {
 
@@ -117,10 +117,10 @@ export default function Play() {
                 </div>
                 <div className="flex items-center h-full flex-1 justify-center gap-2">
                     {
-                        letrasMarcadas.map((l) => l.has == true ? (
-                            <span>{l.content}</span>
+                        letrasMarcadas.map((l, index) => l.has == true ? (
+                            <span key={index}>{l.content}</span>
                         ) : (
-                            <del>{l.content}</del>
+                            <del key={index}>{l.content}</del>
                         ))
                     }
                 </div>
