@@ -19,7 +19,7 @@ export function HomeSection() {
                         loop={1}
                         cursor
                         cursorStyle='|'
-                        typeSpeed={50}
+                        typeSpeed={100}
                         deleteSpeed={10}
                         delaySpeed={1000}
                     />

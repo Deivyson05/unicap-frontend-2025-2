@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -9,6 +10,8 @@ import { projetos } from "@/app/sections/projetos/projetos";
 import styles from "./styles.module.css";
 
 import { Button } from "@/components/ui/button"
+
+import { AboutControls } from "@/components/aboutControls";
 
 import {
     Card,
@@ -25,6 +28,20 @@ interface Props {
 }
 
 export default function ProjetoDetalha({ params }: Props) {
+    const router = useRouter();
+
+    const [width, setWidth] = useState(0);
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+
     const [content, setContent] = useState("");
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
@@ -94,7 +111,6 @@ export default function ProjetoDetalha({ params }: Props) {
         return <div className="min-h-screen flex items-center justify-center">Erro ao carregar o README: {error}</div>;
     }
 
-
     return (
         <main className="min-h-screen mt-20 flex flex-col p-10 gap-10 md:flex-row md:justify-between">
             <section className={`flex flex-col gap-4 ${styles.content} md:w-[70%]`}>
@@ -102,36 +118,49 @@ export default function ProjetoDetalha({ params }: Props) {
                     {content}
                 </ReactMarkdown>
             </section>
-            <section className="flex flex-col gap-5">
-                <Card className="flex flex-col px-5 bg-gray-900">
-                    <CardTitle>Tecnologias</CardTitle>
-                    <div className="flex gap-2 flex-wrap">
-                        {
-                            projeto?.tec.map((t, index) => (
-                                <Badge variant="default" key={index}
-                                    className={`text-white border-l-4 border-l-${filterColors(t)}-200 bg-${filterColors(t)}-600`}
-                                >{t}</Badge>
-                            ))
-                        }
 
-                    </div>
-                </Card>
-                <Card className="flex flex-col px-5 bg-gray-900">
-                    <CardTitle>Visualizar</CardTitle>
-                    <div className="flex gap-2">
-                        <Button variant="default" className="flex-1 text-white cursor-pointer"
-                            onClick={() => {
-                                window.open(projeto?.site || "#");
-                            }}
-                        >Projeto</Button>
-                        <Button variant="secondary" className="flex-1 text-white cursor-pointer"
-                            onClick={() => {
-                                window.open(projeto?.repo || "#");
-                            }}
-                        >Código</Button>
-                    </div>
-                </Card>
-            </section>
+            {
+                width <= 767? (
+                    <AboutControls projeto={projeto}
+                        onBack={()=> {
+                            router.back();
+                        }}
+                    />
+                ): (
+                    <section className="flex flex-col gap-5">
+                        <Card className="flex flex-col px-5 bg-gray-900">
+                            <CardTitle>Tecnologias</CardTitle>
+                            <div className="flex gap-2 flex-wrap">
+                                {
+                                    projeto?.tec.map((t, index) => (
+                                        <Badge variant="default" key={index}
+                                            className={`text-white border-l-4 border-l-${filterColors(t)}-200 bg-${filterColors(t)}-600`}
+                                        >{t}</Badge>
+                                    ))
+                                }
+
+                            </div>
+                        </Card>
+                        <Card className="flex flex-col px-5 bg-gray-900">
+                            <CardTitle>Visualizar</CardTitle>
+                            <div className="flex gap-2">
+                                <Button variant="default" className="flex-1 text-white cursor-pointer"
+                                    onClick={() => {
+                                        window.open(projeto?.site || "#");
+                                    }}
+                                >Projeto</Button>
+                                <Button variant="secondary" className="flex-1 text-white cursor-pointer"
+                                    onClick={() => {
+                                        window.open(projeto?.repo || "#");
+                                    }}
+                                >Código</Button>
+                            </div>
+                        </Card>
+                    </section>
+                )
+            }
+            
+            
         </main>
     )
 }

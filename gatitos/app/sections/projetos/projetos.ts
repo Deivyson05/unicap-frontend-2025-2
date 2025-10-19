@@ -13,7 +13,7 @@ export const projetos = [
         nome: "Shlomo",
         desc: "Aplicativo de gerenciamento de leitura",
         repo: "https://github.com/Deivyson05/guia-de-leitura",
-        site: "https://combogo.vercel.app",
+        site: "",
         img: "https://drive.google.com/thumbnail?id=18NFgLVbCT26on8WJO_YO6cY4nmd4yUiB",
         tec: ["Node Js", "React Native", "JavaScript", "Figma", "TypeScript", "MongoDB"]
     },
@@ -22,7 +22,7 @@ export const projetos = [
         nome: "Adotaí",
         desc: "Aplicativo de match de pets",
         repo: "https://github.com/AdotaAi/Adotai",
-        site: "https://combogo.vercel.app",
+        site: "",
         img: "https://avatars.githubusercontent.com/u/206623208?s=200&v=4",
         tec: ["Node Js", "React Js", "TypeScript", "CSS3", "HTML5", "Figma", "PostgreSQL"]
     }
